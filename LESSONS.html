@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LESSONS</title>
+
+
+<style>
+:root{
+--bg-dark: #0b0202;
+--card-dark: #1b0404;
+--accent: #ff4b4b;
+--accent-2: #ff8b8b;
+--muted: #f3eaea;}
+*{box-sizing:border-box}
+
+html,body{height:100%;margin:0;background:radial-gradient(circle at top left, rgba(60,0,0,0.6), rgba(0,0,0,0.85)),url('htmlbg.jpeg') center/cover fixed no-repeat;color:var(--muted);font-family:'Poppins',sans-serif;line-height:1.5}
+a{color:var(--accent-2);text-decoration:none}
+main{max-width:1200px;margin:32px auto;padding:24px}
+
+header{text-align:center;padding:28px 16px;margin-bottom:18px;border-radius:18px; background: linear-gradient(180deg, rgba(20,2,2,0.65), rgba(0,0,0,0.45));box-shadow:0 6px 40px rgba(255,0,0,0.12), inset 0 1px 0 rgba(255,80,80,0.03);border:1px solid rgba(255,75,75,0.12)}
+header h1{font-family:'Montserrat',sans-serif;font-size:40px;margin:0;background:linear-gradient(90deg,var(--accent),#8b0000);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 18px rgba(255,0,0,0.22)}header p{margin:8px 0 0;color:#ffdede;font-weight:500}
+
+nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0}
+.pill{background:linear-gradient(180deg, rgba(139,0,0,0.9), rgba(90,0,0,0.9));
+padding:10px 16px;border-radius:999px;font-weight:700;color:#fff;border:2px solid rgba(255,80,80,0.15);
+box-shadow:0 6px 20px rgba(255,0,0,0.08);transition:transform .18s,box-shadow .18s}
+.pill:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(255,0,0,0.18)}
+
+.grid{display:grid;grid-template-columns: 1fr; gap:20px}
+@media(min-width:980px){ .grid{grid-template-columns: 1fr 360px} }
+
+.card{background:linear-gradient(180deg, rgba(20,2,2,0.55), rgba(8,1,1,0.65));padding:20px;border-radius:14px;border:1px solid rgba(255,60,60,0.08);box-shadow:0 8px 35px rgba(0,0,0,0.6);}
+.card h3{font-family:'Montserrat',sans-serif;margin:0 0 8px;color:var(--accent-2)}
+.muted {color:#ffdfdf;font-size:0.95rem}
+
+.glow-border{border:2px solid rgba(255,80,80,0.14);box-shadow:0 0 40px rgba(255,0,0,0.08)}
+.accent-title{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(255,20,20,0.06);border:1px solid rgba(255,80,80,0.12);color:var(--accent);font-weight:800}
+
+ul{padding-left:1.1rem}
+li{margin:8px 0}
+pre{background:rgba(255,255,255,0.03);padding:12px;border-radius:10px;overflow:auto;border:1px solid rgba(255,255,255,0.03);font-family:monospace;font-size:0.95rem;color:#ffeaea}
+
+.lessons-container {display: grid;grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));gap: 35px;justify-content: center;align-items: stretch;margin: 60px auto;max-width: 1200px;padding: 0 20px;}
+
+.card {background: linear-gradient(180deg, rgba(20,2,2,0.55), rgba(8,1,1,0.85));padding: 35px;border-radius: 20px;border: 1px solid rgba(255,60,60,0.15);box-shadow: 0 0 45px rgba(255,0,0,0.25);transition: transform 0.3s, box-shadow 0.3s;text-align: left;min-height: 300px;}
+
+.card:hover {transform: translateY(-6px);box-shadow: 0 0 60px rgba(255,0,0,0.45);}
+
+.card h2 {color: #ff8080;text-shadow: 0 0 15px rgba(255,0,0,0.5);margin-bottom: 15px;}
+
+.accent-title {display: inline-block;padding: 6px 12px;border-radius: 999px;background: rgba(255,20,20,0.08);border: 1px solid rgba(255,80,80,0.15);color: var(--accent); font-weight: 800;margin-bottom: 10px;}
+
+@media (max-width: 1100px) {.lessons-container {grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));}}
+@media (max-width: 700px) {.lessons-container {grid-template-columns: 1fr;}}
+  </style>
+</head>
+
+<body>
+<main>
+<header class="shine">
+ <h1>TLE / ICT 9 — CSS & Style Sheets</h1>
+</header>
+
+<nav aria-label="Quick links">
+  <a class="pill" href="#lesson1">Lesson 1</a>
+  <a class="pill" href="#lesson2">Lesson 2</a>
+  <a class="pill" href="#lesson3">Lesson 3</a>
+  <a class="pill" href="#lesson4">Lesson 4</a>
+  <a class="pill" href="#lesson5">Lesson 5</a>
+</nav>
+
+<div class="grid">
+<section style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+
+<article id="lesson1" class="card glow-border">
+<span class="accent-title">Lesson 1</span>
+<h2>What is CSS? (Overview & Benefits)</h2>
+
+<h3>Definition</h3>
+<p>CSS stands for <strong>Cascading Style Sheets</strong>. It describes how HTML elements are displayed on screen, paper, or other media. CSS separates content (HTML) from design, simplifies maintenance, and can control the layout of multiple pages at once. </p>
+
+<h4>Why use CSS?</h4>
+<ul>
+<li>CSS is used to define styles for your web pages,
+including the design, layout and variations in
+display for different devices and screen sizes.</li>
+<li>Provides consistency across web pages and saves time: one CSS file can control multiple
+pages.</li>
+<li>Improve accessibility and responsiveness.</li>
+<li>Enhance design with layouts, colors, and animations.</li>
+</ul>
+
+<h4>Layers of a Webpage</h4>
+<p>Each layer of the webpage has its specific use or function inthe web page. Each plays an important role to be able to attain the goal or objective of a particular website.</p>
+<ol>
+<li><strong>Content Layer</strong>  HTML: text, images, video, structured content, accessible alt text and clear phrasing. (Guidelines: KISS, readable headings/paragraphs, alt text for images.)</li>
+<li><strong>Presentation Layer</strong> CSS: controls how users see the page. Ensure zoomability, contrast (colorblind-friendly), consistent navigation, and separation into understandable units.</li>
+<li><strong>Behavior Layer</strong> JavaScript or scripting: real-time interactions, validation, dynamic experiences. Make sure functionality is available regardless of input device. </li>
+</ol>
+
+<h4>Benefits & Capabilities</h4>
+<ul>
+<li>Easy maintenance — change one stylesheet, update entire site.</li>
+<li>Faster page loading and more flexible design.</li>
+<li>Position and layer objects precisely, create custom tags and reusable styles.</li>
+</ul>
+
+</ul>
+
+<h4>Prerequisite</h4>
+<p>Basic knowledge of HTML/XHTML before learning CSS.</p>
+</article> 
+
+<article id="lesson2" class="card glow-border">
+<article id="lesson2" class="card glow-border" style="margin-top:18px">
+<span class="accent-title">Lesson 2</span>
+<h3>Style Sheets: Structure & Types</h3>
+<h4>Structure of a CSS rule</h4>
+<p>A CSS rule is composed of:</p>
+<ul>
+<li><strong>Selector</strong> —  the HTML element you want to style; is a
+ pattern used to "find" or "select" the HTML
+ elements on a webpage to which a set of
+ CSS rules will be applied.</li>
+<li><strong>Declaration</strong> — is a single instruction that defines a specific
+ style for an element</li>
+<li><strong>Declaration block</strong> – fundamental part of a CSS rule. It is a
+block of code that contains one or more CSS declarations,
+which define the styling rules for the selected HTML
+element(s).</li>
+<li><strong>Property</strong> — the style attribute you want to modify; is a
+ named characteristic or attribute that
+ defines a specific aspect of how an HTML
+ element should be displayed or rendered by
+ the browser. Properties are used within
+ CSS declarations to apply styles to selected
+ elements.</li>
+<li><strong>Value</strong> — the weight of the attribute you want to apply to the
+ element property; is the specific setting or
+ configuration assigned to a CSS property. A property
+ and its value form a CSS declaration, which dictates
+ how an element should be styled</li>
+</ul>
+<p> The Style Sheet and its Parts</p>
+<ul>
+<li>A set of instructions to a Web browser on how to
+ display various elements on a Web page is known as
+ style sheet.</li>
+<li>Every CSS (whether it is contained in a .css file, or
+ embedded in the head element of an HTML
+ document) is a series of instructions called
+ statements</li>
+
+<h4>How style sheets work</h4>
+<p>Style sheets are just text files, or text embedded in the
+ head of an HTML document, that help separate
+ content from appearance. The content of the page goes
+ into an HTML file. And the appearance goes into a
+ style sheet. But how does all this end up as a web
+ page in the reader’s browse<br><br>A style sheet suggests the browser to
+display a page in a particular way, how the
+pages should be displayed in the browser.</p>
+
+<h4>Three kinds of CSS</h4>
+<ul>
+<li><strong>External style sheets</strong> — <br>• the most global of the three kinds of CSS because you
+can apply the same one to an unlimited number of
+pages<br>
+• allows you to develop a consistent style across pages<br>
+• easily allow you to change the layout of your entire
+web site by simply changing the external style sheet
+and every page is instantly updated<br>
+• has a .css file extension </li>
+<li><strong>Embedded/Internal style sheets</strong> — <br>• used for creating a document-wide style rule
+• placed within an HTML document, between the
+<head> and </head><br>
+• used when you have a page that you want to present
+in a different style from other pages<br>
+• embedded style sheets override external style sheets </li>
+            <li><strong>Inline styles</strong> — <br>• used for isolated changes to a headline, paragraph,
+picture or other element<br>
+• stored directly in the style attributes of the HTML tags<br>
+• inline style sheets override external and embedded<br>
+style sheets</li>
+</ul>
+
+<h4>Important syntax notes</h4>
+<ul>
+<li>Use curly braces { } for declaration blocks, colons : between property and value, and semicolons ; between declarations.</li>
+<li>CSS comments use <code>/* comment */</code>.</li>
+<li>The &lt;style&gt; tag commonly uses <code>type="text/css"</code> though modern browsers accept simply &lt;style&gt;.</li>
+</ul>
+
+<h4>Examples & reminders</h4>
+<pre>
+p { font-family: Arial; color: green; }
+</pre>
+
+<div class="lessons-container">
+
+
+
+
+<article id="lesson3" class="card glow-border">
+<span class="accent-title">Lesson 3</span>
+<h2>Applying CSS to HTML Documents</h2>
+<p>
+Cascading Style Sheets (CSS) can be applied to a webpage through three main methods:<strong>inline</strong>, <strong>internal (embedded)</strong>, and <strong>external style sheets</strong>.Inline CSS involves directly writing style rules within an HTML element using the<code>style</code> attribute. For example:
+</p>
+<pre>&lt;p style="color: green; font-size: 18px;"&gt;This paragraph uses inline CSS.&lt;/p&gt;</pre>
+ <p>Internal or embedded CSS is placed inside a &lt;style&gt; tag within the &lt;head&gt; sectionof an HTML document, allowing multiple elements in the same page to share consistent formatting:</p>
+<pre>&lt;style&gt;
+h1 { color: red; text-align: center; }
+p  { font-size: 18px; color: purple; }
+&lt;/style&gt;
+</pre>
+<p>
+
+External CSS uses a separate <strong>.css</strong> file linked to the HTML page with
+&lt;link rel="stylesheet" href="style.css"&gt;. This method is most efficient for sites
+with multiple pages because editing one stylesheet updates them all.
+</p>
+<p>
+The <strong>display property</strong> defines how elements appear and behave. Two major element types exist: <strong>block-level</strong> and <strong>inline-level</strong>. Block-level elements (like &lt;p&gt;, &lt;div&gt;, &lt;section&gt;, &lt;article&gt;,&lt;ol&gt;, &lt;ul&gt;, and headings &lt;h1&gt;–&lt;h6&gt;) take the full width and start on new lines, stacking vertically. Inline elements (like &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;b&gt;, &lt;i&gt;, &lt;q&gt;, &lt;mark&gt;, and &lt;span&gt;) sit side by side horizontally and don’t begin on new lines.</p>
+
+<p>
+Inline elements can’t contain block-level ones. For instance, &lt;em&gt; cannot wrap around multiple paragraphs, but it can sit inside one:
+</p>
+
+<pre>
+&lt;p&gt;&lt;em&gt;Example text&lt;/em&gt;&lt;/p&gt;
+</pre>
+
+<p>The <strong>display</strong> property can modify default behavior:
+<code>display: inline;</code> keeps items horizontal,
+<code>display: block;</code> stacks them vertically,
+<code>display: list-item;</code> mimics list behavior,
+<code>display: none;</code> hides elements, and
+<code>display: inherit;</code> copies the parent’s display value.
+For example:
+</p>
+
+<pre>
+p { display: inline; }
+span { display: block; }
+</pre>
+
+<p>
+Structuring webpages often involves the <strong>&lt;div&gt;</strong> and
+<strong>&lt;span&gt;</strong> tags. Both are generic containers with no visual effect
+until styled with CSS. &lt;div&gt; is <em>block-level</em> and used to group larger
+sections of a page:
+</p>
+
+<pre>
+&lt;div class="section1"&gt;This is a styled section.&lt;/div&gt;
+</pre>
+
+<p>
+&lt;span&gt; is <em>inline</em> and best for styling small portions of text:
+</p>
+
+<pre>
+&lt;p&gt;This &lt;span style="color:red;"&gt;word&lt;/span&gt; is emphasized.&lt;/p&gt;
+</pre>
+
+<p>
+Both tags work powerfully with <strong>CSS classes</strong> via the <code>class</code>
+attribute. For example:  </p>
+
+<pre>
+&lt;div class="highlight"&gt;Sample text&lt;/div&gt;
+
+.highlight { background-color: yellow; }
+</pre>
+
+<p>In summary, Lesson 3 highlights how different stylesheet methods(inline, internal, and external) influence page design; how the<strong>display property</strong> defines layout; how block-level and inline elements behave; and how &lt;div&gt; and &lt;span&gt; serve as flexible containers for organizing and styling content effectively across web pages.</p>
+</article>
+
+
+<article id="lesson4" class="card glow-border">
+<span class="accent-title">Lesson 4</span>
+<h2>CSS Rules, Classes, and Grouping Selectors</h2>
+<p>A <strong>CSS rule</strong> is the foundation of every style sheet. It tells the browser which elements to style and how to style them. A rule consists of two parts: the <em>selector</em>, which identifies the HTML element to be styled, and the <em>declaration block</em>, which contains one or more style declarations written inside curly braces <code>{ }</code>.</p>
+<pre>
+p {color: red;
+font-size: 18px;}
+</pre>
+
+<p>In this example, the selector <code>p</code> targets all paragraph elements, and the declarations define their color and font size. Each declaration includes a <strong>property</strong> (such as <code>color</code>) and a <strong>value</strong> (such as <code>red</code>), separated by a colon and ending with a semicolon. </p>
+
+<p>There are six main groups of <strong>style properties</strong> used in CSS:</p>
+
+  <ul>
+    <li><strong>Fonts</strong> — define the typeface, size, and weight of text.  
+      <pre>p { font-family: Arial; font-size: 16px; }</pre>
+    </li>
+    <li><strong>Colors and Backgrounds</strong> — control the visual appearance and background of elements.  
+      <pre>body { background-color: black; color: white; }</pre>
+    </li>
+    <li><strong>Text</strong> — manage alignment, decoration, and spacing.  
+      <pre>h1 { text-align: center; text-transform: uppercase; }</pre>
+    </li>
+    <li><strong>Boxes and Layout</strong> — determine how elements are positioned on the page.  
+      <pre>div { margin: 20px; padding: 15px; border: 2px solid red; }</pre>
+    </li>
+    <li><strong>Lists</strong> — modify bullets, numbering, and list spacing.  
+      <pre>ul { list-style-type: square; }</pre>
+    </li>
+    <li><strong>Tag Classifications</strong> — control how elements behave or are categorized.  
+      <pre>img { display: block; }</pre>
+    </li>
+  </ul>
+
+  <p>
+    CSS also allows developers to define reusable styles through <strong>classes</strong>. A class is a 
+    custom name that can be applied to any element using the <code>class</code> attribute in HTML. 
+    Classes are declared in CSS using a period (<code>.</code>) before the class name. For example:
+  </p>
+
+  <pre>
+p.golden { color: blue; }
+.sodapop { color: red; }
+  </pre>
+
+  <p>
+    In the HTML file, you can call these classes like this:
+  </p>
+
+  <pre>
+<p class="golden">This paragraph text is blue.</p>
+<div class="sodapop">This div text is red.</div>
+  </pre>
+
+  <p>
+    You can also assign multiple classes to one element for combined effects:
+  </p>
+
+  <pre>
+<p class="highlight big-text">This text is both highlighted and large.</p>
+  </pre>
+
+  <pre>
+.highlight { background-color: yellow; color: black; }
+.big-text { font-size: 24px; font-weight: bold; }
+  </pre>
+
+  <p>
+    The <strong>class selector</strong> (<code>.classname</code>) applies to any element with that class,
+    while the <strong>element + class selector</strong> (<code>element.classname</code>) is more specific
+    and only affects that particular HTML tag. Example:
+  </p>
+
+  <pre>
+.note { background-color: yellow; }
+p.note { color: blue; }
+  </pre>
+
+  <p>
+    Here, <code>.note</code> affects all elements using the class <em>note</em>, but <code>p.note</code> 
+    only styles paragraphs that use that same class.  
+    Example in HTML:
+  </p>
+
+  <pre>
+<p class="note">This is a styled paragraph.</p>
+<li class="note">This is a styled list item.</li>
+  </pre>
+
+  <p>
+    Another important concept is the <strong>grouping selector</strong>, which lets you apply the same
+    styles to multiple selectors at once by separating them with commas. This reduces repetition and keeps
+    code clean. For example:
+  </p>
+
+  <pre>
+h1, p { color: white; background-color: black; }
+  </pre>
+
+  <p> This rule applies the same color and background to both headings and paragraphs. Grouping selectors ensure consistency and efficiency across multiple elements, allowing designers to write shorter and more organized stylesheets.
+  </p>
+
+  <p>In summary, Lesson 4 emphasizes that each CSS rule follows the structure of a selector and a declaration block, while style properties are categorized into six major groups. Classes enable reusable, flexible styling; element-plus-class selectors add precision; and grouping selectors make your code cleaner and easier to maintain.
+  </p>
+</article>
+</div>
+
+<article id="lesson5" class="card glow-border">
+  <span class="accent-title">Lesson 5</span>
+  <h2>Lesson 5 Title Here</h2>
+  <p>Lesson 5 content goes here...</p>
+</article>
+</body>
+</html>

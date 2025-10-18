@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+<title>Sefie Labador</title>
+
+<style>
+body {font-family: Alatsi, sans-serif;margin: 0;color: white;height: 100vh;overflow-x: hidden;overflow-y: auto;background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("htmlbg.jpeg") no-repeat center center fixed;background-size: cover;}
+
+header {background: rgba(1, 1, 1, 0.5);padding: 20px;text-align: center;}
+header h1 {font-family: 'Montserrat', sans-serif;font-size: 65px;font-weight: 900;background: linear-gradient(to right, #ff1e1e, #8b0000);-webkit-background-clip: text  -webkit-text-fill-color: transparent;text-transform: uppercase;letter-spacing: 2px;margin: 0;}
+header p {font-family: 'Montserrat', sans-serif;font-size: 28px;font-weight: 700;}
+
+nav {background: darkred;padding: 10px;text-align: center;font-family: Arial;font-size: 20px;letter-spacing: 1px;}
+nav a {color: rgba(255, 255, 255, 0.6);text-decoration: none;margin: 0 75px;}
+nav a:hover {color: white;text-shadow: 0 0 10px rgba(255,255,255,0.8);}
+
+.film-container {display: flex;justify-content: center;margin-top: 20px;}
+.film-container iframe {width: 100%;max-width: 600px;height: 340px;border: 3px solid crimson;border-radius: 10px;}
+footer {background: darkred;color: white;text-align: center;padding: 10px;margin-top: 20px;}
+
+.about-container {background: rgba(139,0,0,0.85);display: flex;align-items: center;justify-content: center;gap: 40px;max-width: 1100px;margin: 20px auto;padding: 40px;border-radius: 15px;box-shadow: 0 0 25px rgba(255,255,255,0.6),
+0 0 50px rgba(220,20,60,0.8),
+0 0 80px rgba(139,0,0,0.9);transition: transform 0.3s, box-shadow 0.3s;}
+.about-container:hover {transform: translateY(-10px);box-shadow: 0 0 35px rgba(255,255,255,0.9),
+0 0 70px rgba(220,20,60,0.95),
+0 0 100px rgba(139,0,0,1);}
+.about-container img {width: 350px;height: auto;border-radius: 15px;border: 4px solid #fff;box-shadow: 0 0 20px rgba(255,255,255,0.8),0 0 40px rgba(220,20,60,0.9);transition: transform 0.3s, box-shadow 0.3s;}
+.about-container img:hover {transform: scale(1.05);box-shadow: 0 0 25px rgba(255,255,255,1),
+0 0 50px rgba(220,20,60,1),
+0 0 80px rgba(139,0,0,1);}
+.about-container p {flex: 1;font-size: 1.3rem;line-height: 1.8;color: #f5f5f5;font-family: Cinzel, serif;font-weight: bold;padding: 20px;background: rgba(0,0,0,0.3);border-radius: 12px;text-shadow: 0 0 8px rgba(255,255,255,0.4);box-shadow: inset 0 0 15px rgba(255,255,255,0.2);}
+#about h2 {font-size: 65px;font-family: 'Montserrat', sans-serif;font-weight: 900;margin-bottom: 40px;text-align: center;letter-spacing: 2px;background: linear-gradient(to right, #ffffff, #ff4d4d, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-shadow:
+0 0 20px rgba(255,255,255,0.8),
+0 0 40px rgba(220,20,60,0.9),
+0 0 60px rgba(139,0,0,1);position: relative;display: inline-block;padding: 15px 30px;}
+#about h2::before {content: "";position: absolute;top: 0; left: 0; right: 0; bottom: 0;background: rgba(139,0,0,0.3);border-radius: 15px;z-index: -1;box-shadow: 0 0 25px rgba(139,0,0,0.6);}
+@keyframes glowPulse {
+0%   { text-shadow: 0 0 15px rgba(255,255,255,0.7), 0 0 35px crimson; }
+50%  { text-shadow: 0 0 25px rgba(255,255,255,1), 0 0 55px darkred; }
+100% { text-shadow: 0 0 15px rgba(255,255,255,0.7), 0 0 35px crimson; }}
+#about h2 { animation: glowPulse 3s infinite ease-in-out; }
+
+.TLE-cards div {background: #0d0d0d;border-radius: 15px;padding: 15px;text-align: center;box-shadow: 0 0 15px rgba(255,255,255,0.5);transition: all 0.3s ease;}
+.TLE-cards div:hover {transform: scale(1.05);box-shadow: 0 0 30px rgba(255,255,255,1);}
+
+.portal-btn {text-decoration: none;display: inline-block;padding: 18px 40px;font-size: 22px;font-family: 'Montserrat', sans-serif;font-weight: 900;letter-spacing: 1.5px;color: white;border: 3px solid #ff4d4d;border-radius: 50px;background: linear-gradient(135deg, #ff1e1e, #8b0000);box-shadow: 0 0 25px rgba(255,0,0,0.8),inset 0 0 15px rgba(255,255,255,0.2);transition: all 0.3s ease-in-out;}
+.portal-btn:hover {transform: scale(1.08);box-shadow: 0 0 40px rgba(255,50,50,1),inset 0 0 15px rgba(255,255,255,0.4);}
+
+
+.video-frame {position: relative;display: inline-block;border-radius: 20px;overflow: hidden;box-shadow: 0 0 25px rgba(0,150,255,0.8);transition: transform 0.4s, box-shadow 0.4s;}
+.video-frame:hover {transform: scale(1.05);box-shadow: 0 0 45px rgba(0,200,255,1);}
+
+.reflection {max-width: 800px;margin: 60px auto;padding: 40px;background: radial-gradient(circle at top left, #2b0000, #000);border: 2px solid #ff4b4b;border-radius: 25px;box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);font-family: "Poppins", sans-serif;color: #fff;text-align: center;position: relative;overflow: hidden;}
+ .reflection::before {content: "";position: absolute;top: -50%;left: -50%;width: 200%;height: 200%;background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%);animation: pulse 6s infinite alternate;z-index: 0;}
+@keyframes pulse {from { transform: scale(1); opacity: 0.6; }to { transform: scale(1.3); opacity: 0.3; }}
+.reflection-content { position: relative;z-index: 1;}
+.reflection h2 {font-size: 2em;color: #ff6666;text-shadow: 0 0 15px #ff0000;margin-bottom: 20px; letter-spacing: 1px;}
+.reflection p {font-size: 1.1em;line-height: 1.8;color: #f2f2f2;text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);margin: 0 auto;max-width: 90%;}
+.reflection hr {border: none;height: 2px;background: linear-gradient(90deg, transparent, #ff0000, transparent);margin: 25px auto;width: 70%;}
+  </section>
+</style>
+</head>
+
+<body>
+<header>
+<h1>Welcome, I'm Sefie</h1>
+<p style="font-size:27px;font-family:Courier New;color:Gainsboro;">Josephine Grace P. Labador from 9-FIDELITY</p>
+</header>
+
+<nav>
+<a href="#about"><b>ABOUT ME 👤</b></a>
+<a href="#TLE"><b>TLE-ICT CONTENTS 💻</b></a>
+<a href="#AP"><b>ARALING PANLIPUNAN 🌍</b></a>
+<a href="#film"><b>MY FILM 🎬</b></a>
+</nav>
+
+<section id="about">
+ <h2>About Me</h2>
+
+ <div class="about-container">
+ <img src="htmlpfp.PNG" alt="My Photo">
+<p>I am Josephine Grace P. Labador, often called <b>“Sefie”</b>— derived from JoSEPHIne. My parents believed that changing PH with F would sound fancier. I was born on March 7, 2011 so I’m now 14 years old. I wouldn’t say I have just one set of hobbies well I consider myself a jack of all trades, a master of none. While I’m drawn most strongly to anything artistic, I find inspiration in all kinds of creative expression. After all, isn’t everything a form of art in its own way? In short, I’m passionate about exploring, creating, and appreciating a little bit of everything.</p>  </div>
+
+ <div style="display:flex; gap:40px; justify-content:center; flex-wrap:wrap; margin-top:40px;">
+<div class="about-container" style="flex:1; min-width:300px;">
+<img src="friends.jpg" alt="Friends Photo">
+<p>One fact about me is I don’t really have a favorite place. I don’t care where I am—what matters is who I’m with. Honestly, my biggest blessing is my friends and the people around me. Toxic relationships? Nope, not in my dictionary. I always try to show love and care, and they do the same for me (which is super awesome). I love them so much it feels like my heart could explode sometimes. Because of them, I barely feel sad—maybe just once in a blue moon. Most of the time, I’m just happy. Sure, we all make mistakes and sometimes things get messy, but they’re always there for me, and I’m so thankful. Sometimes I cry when I think about the hard times we went through together and how we never left each other. And now I’m literally tearing up again because I love them so much.</p>
+</div>
+
+<div class="about-container" style="flex:1; min-width:300px;">
+<img src="family.jpg" alt="Family Photo">
+<p>I could pen a thousand words yet still fall short of what’s inside in writing about how much I love my family. “You do not choose your family, GOD chooses them for you.” I’ve heard from my parents. That quote hit me and made me thank God sooo much for giving me this wonderful family. I am so blessed that I consider my family perfect, in all life aspects. I could describe my family but it will be too much. All I can say is that much like a tree, the Foundation of my being is deeply rooted in the lessons and experiences that is nourished by the people I mostly Trust and Love. Hence, the knowledge and actions I exercise in my life is mostly influenced by them.</p>
+</div>
+ </div>
+</section>
+
+<hr style="border:none;height:8px;margin:70px auto;width:85%;background:linear-gradient(to right,transparent,crimson,darkred,crimson,transparent);border-radius:10px;box-shadow:0 0 20px rgba(139,0,0,0.8);">
+
+<section id="TLE" style="padding:50px 20px; text-align:center; background:linear-gradient(135deg, rgba(139,0,0,0.95), rgba(90,0,0,0.95)); border-radius:10px;">
+  <h2 style="font-size:42px; font-family:'Montserrat',sans-serif; font-weight:900; color:white; text-shadow:0 0 15px rgba(255,255,255,0.9);">
+    TLE-ICT CONTENTS 💻
+  </h2>
+
+  <div class="TLE-cards" style="display:flex; justify-content:center; flex-wrap:wrap; gap:35px; margin-top:30px;">
+
+    <!-- Card 1: Lessons Summary -->
+    <a href="LESSONS.html" style="text-decoration:none; color:white;">
+      <div style="background:#0d0d0d; border-radius:15px; padding:15px; text-align:center; box-shadow:0 0 15px rgba(255,255,255,0.5); width:380px; transition:all 0.3s ease;">
+        <img src="lesson1and2.jpg" alt="HTML & CSS" style="width:100%; height:220px; object-fit:cover; border-radius:12px;">
+        <h3 style="margin-top:15px;">LESSONS SUMMARY</h3>
+      </div>
+    </a>
+
+    <!-- Card 2: Reflections -->
+    <a href="reflection.html" style="text-decoration:none; color:white;">
+      <div style="background:#0d0d0d; border-radius:15px; padding:15px; text-align:center; box-shadow:0 0 15px rgba(255,255,255,0.5); width:380px; transition:all 0.3s ease;">
+        <img src="34.jpg" alt="Basic JavaScript" style="width:100%; height:220px; object-fit:cover; border-radius:12px;">
+        <h3 style="margin-top:15px;">SHORT REFLECTIONS FOR EACH LESSON</h3>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section id="AP" style="padding:60px 20px; text-align:center; background:linear-gradient(135deg, rgba(50,0,0,0.9), rgba(139,0,0,0.95)); border-radius:15px; box-shadow:0 6px 25px rgba(0,0,0,0.7); margin:70px auto; width:90%; max-width:1200px;">
+  <h2 style="font-size:48px;font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:2px;margin-bottom:30px;background:linear-gradient(to right,#ffcc70,#ff8177,#cf556c,#b12a5b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:2px 2px 10px rgba(0,0,0,0.7);">🌍 ARALING PANLIPUNAN</h2>
+  <p style="color:#f0e9e9;font-size:20px;font-family:'Cinzel',serif;margin-bottom:40px;">aaaaaaaaaaaaaaaaaaaa</p>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:25px; margin-bottom:50px;">
+    <div style="background:#8b0000;border-radius:15px;padding:25px;color:white;box-shadow:0 6px 15px rgba(0,0,0,0.6);transition:transform 0.3s, box-shadow 0.3s;">
+      <h3>aaaaaa</h3><p>Science Presentation</p>
+    </div>
+    <div style="background:#8b0000;border-radius:15px;padding:25px;color:white;box-shadow:0 6px 15px rgba(0,0,0,0.6);transition:transform 0.3s, box-shadow 0.3s;">
+      <h3>aaaaaa</h3><p>Simple Website</p>
+    </div>
+    <div style="background:#8b0000;border-radius:15px;padding:25px;color:white;box-shadow:0 6px 15px rgba(0,0,0,0.6);transition:transform 0.3s, box-shadow 0.3s;">
+      <h3>mooo</h3><p>yes</p>
+    </div>
+  </div>
+
+  <a href="APsite.html" class="portal-btn">🚪 ENTER THE AP PORTAL</a>
+</section>
+
+<section id="film" style="padding:70px 20px;text-align:center;background:linear-gradient(135deg,rgba(0,0,0,0.9),rgba(90,0,0,0.95));border-radius:15px;box-shadow:0 6px 25px rgba(0,0,0,0.7);margin:70px auto;width:90%;max-width:1200px;">
+  <h2 style="font-size:48px;font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:2px;margin-bottom:30px;background:linear-gradient(to right,#00c6ff,#0072ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:2px 2px 10px rgba(0,0,0,0.7);">🎥 SCHOOL EVENTS FILM</h2>
+  <p style="color:#f0e9e9;font-size:20px;font-family:'Cinzel',serif;margin-bottom:40px;">A glimpse of our school events through my upcoming film project.</p>
+
+  <div class="video-frame">
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="School Events Film" frameborder="0" allowfullscreen style="border:none;display:block;"></iframe>
+  </div>
+
+  <p style="margin-top:25px;font-size:18px;color:#ddd;font-style:italic;">🎬 Coming soon: My very own film capturing the spirit of our school events!</p>
+</section>
+
+<section class="reflection">
+  <div class="reflection-content">
+    <h2>🔥 Reflection</h2>
+    <hr>
+    <p>
+      What I witnessed in the film wasn’t just a portrayal of culture—it was a mirror of identity, 
+      unity, and pride. Every color, movement, and symbol told a story that lives beyond fabric and rhythm. 
+      It reminded me that tradition is not something old to be forgotten, but something alive that we continue to carry.
+    </p>
+  </div>
+</section>
+<footer>
+  <p>© 2025 Las Pinas City National Science High School</p>
+</footer>
+
+</body>
+</html>
